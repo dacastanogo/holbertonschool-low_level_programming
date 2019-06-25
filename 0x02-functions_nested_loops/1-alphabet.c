@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
- *print_alphabet - This function prints the alphabet. *
- *Return: 0
+ * print_alphabet - prints alphabet
+ *
+ * Description: prints alphabet new line at the end
+ * Return: void
  */
 void print_alphabet(void)
 {
