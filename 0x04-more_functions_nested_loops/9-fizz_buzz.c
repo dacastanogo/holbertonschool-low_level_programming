@@ -23,8 +23,15 @@ printf(" ");
 }
 else if (x % 5 == 0)
 {
+  if (x == 100)
+{
+printf("Buzz");
+}
+else
+{
 printf("Buzz");
 printf(" ");
+}
 }
 else
 {
@@ -32,5 +39,6 @@ printf("%d", x);
 printf(" ");
 }
 }
+printf("\n");
 return (0);
 }
