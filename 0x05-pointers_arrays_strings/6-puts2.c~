@@ -1,0 +1,23 @@
+#include "holberton.h"
+/**
+ * puts2 - function taprints one char out of 2 of a string,
+ * followed by a new line.
+ * @str: string to print
+ *
+ * Return: void
+ */
+void puts2(char *str)
+{
+  int index = 1;
+
+  while (*str != '\0')
+    {
+      if ((index % 2) != 0)
+	{
+	  _putchar(*str);
+	}
+      str++;
+      index++;
+    }
+  _putchar('\n');
+}
