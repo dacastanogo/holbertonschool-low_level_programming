@@ -3,8 +3,8 @@
 /**
  * *_strpbrk - function that searches
  * a string for any of a set of bytes.
- * @s: string 
- * @c: char to be located
+ * @s: number of bytes
+ * @accept: char to be searched
  * Return: address of s
  */
 
