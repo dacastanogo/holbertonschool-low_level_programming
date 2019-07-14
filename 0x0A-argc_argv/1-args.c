@@ -10,7 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
+int num = 0;
+
+if (argc <= 1)
+{
 printf("%d\n", argc - 1);
-argc[0] = 0;
+}
+else
+{
+while (argv[num] != '\0')
+{
+num++;
+}
+printf("%d\n", num - 1);
+}
 return (0);
 }
