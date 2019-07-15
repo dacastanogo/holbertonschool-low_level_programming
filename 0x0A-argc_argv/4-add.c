@@ -11,9 +11,9 @@
 int check_digit(char *x)
 {
 char digit[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-int i;
-int j;
-int check;
+unsigned int i;
+unsigned int j;
+unsigned int check;
 
 for (i = 0; x[i] != '\0'; i++)
 {
@@ -38,8 +38,8 @@ return (0);
 
 int main(int argc, char *argv[])
 {
-int i;
-int sum = 0;
+unsigned int i;
+unsigned int sum = 0;
 
 for (i = 1; i < argc; i++)
 {
