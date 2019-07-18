@@ -23,7 +23,7 @@ for (i = 0; av[i]; i++)
 for (j = 0; av[i][j]; j++)
 len++;
 }
-p = (char *)malloc(len * sizeof(char) + ac + 1);
+p = (char *)malloc(len *sizeof(char) + ac + 1);
 if (p == NULL)
 return (NULL);
 for (i = 0; av[i]; i++)
