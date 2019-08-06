@@ -1,6 +1,10 @@
 #ifndef _lists_h_
 #define _lists_h
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -31,5 +35,5 @@ listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
-
+int _putchar(char c);
 #endif
