@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * check97 - checks for the correct number of arguments
  * @argc: number of arguments
