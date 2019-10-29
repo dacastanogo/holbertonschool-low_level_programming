@@ -13,47 +13,42 @@ int lomuto_partition(int *array, size_t size, int lower, int upper)
             i++;
             if (i != j)
             {
-                array[tmp] = array[i];
+                tmp = array[i];
                 array[i] = array[j];
-                array[j] = array[tmp];
+                array[j] = tmp;
                 print_array(array, size);
             }
         }        
     }
     if (i != j)
     {
-        array[tmp] = array[i + 1];
+        tmp = array[i + 1];
         array[i + 1] = array[j];
-        array[j] = array[tmp];
+        array[j] = tmp;
         print_array(array, size);
     }
     return (i + 1);
 }   
 
 
-
-
-
-
-
-
-void quick_sort(int *array, size_t size)
+void fast_sort(int *array, size_t size, int lower, int upper)
 {
-    int lower, upper, partition;
-
-    lower = 0;
-    upper = size - 1;
+    int partition;
+        
 
     if (!array || !size)
 	return;
 
-    partition = lomuto_partition(array, size, lower, upper);
-    /* NAAATT acá vamos a tener que cambiar está función porque se supone que ya con la partition
-    se tiene que hacer recursivamente, pero el problema es que cambian los limites lower y upper,
-    y los de nosotros ya están definidos, tenemos que hacer otra función a la cuál le podamos tirar
-    los limites que nos dé a partir de partition, mañana miramos eso*/
+    if (lower < upper)
+    {
+        partition = lomuto_partition(array, size, lower, upper);
+        fast_sort(array, size, 0, partition - 1);
+        fast_sort(array, size, partition + 1, upper);
+    }
+}
 
 
-
-
+void quick_sort(int *array, size_t size)
+{
+    fast_sort(array, size, 0, size - 1);
 }
