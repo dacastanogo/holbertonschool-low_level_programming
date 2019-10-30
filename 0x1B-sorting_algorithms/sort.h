@@ -29,5 +29,6 @@ void insertion_sort_list(listint_t **list);
 void print_list(const listint_t *list);
 void fast_sort(int *array, size_t size, int lower, int upper);
 int lomuto_partition(int *array, size_t size, int lower, int upper);
+void swap(int *array, size_t size, int *i, int *j);
 
 #endif

@@ -10,8 +10,8 @@
 void selection_sort(int *array, size_t size)
 {
 
-    unsigned int i, j, min_index;
-    int min_num;
+	unsigned int i, j, min_index;
+	int min_num;
 
 	if (!size)
 		return;
@@ -31,7 +31,7 @@ void selection_sort(int *array, size_t size)
 		}
 		if (min_index != i)
 		{
-            array[min_index] = array[i];
+			array[min_index] = array[i];
 			array[i] = min_num;
 			print_array(array, size);
 		}
