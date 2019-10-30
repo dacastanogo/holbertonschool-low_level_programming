@@ -20,13 +20,12 @@ int lomuto_partition(int *array, size_t size, int lower, int upper)
 		{
 			i++;
 			swap(array, size, &array[i], &array[j]);
-			
 		}
 	}
 	swap(array, size, &array[i + 1], &array[upper]);
 	return (i + 1);
 	}
-	
+
 /**
  * swap - Swap two values in
  * @array: Array
