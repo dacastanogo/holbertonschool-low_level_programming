@@ -9,11 +9,11 @@
 size_t gap_size(size_t size)
 {
 	size_t n;
-    
-    n = 1;
+
+	n = 1;
 	while (n < size)
 		n = n * 3 + 1;
-	return ((n - 1) / 3); 
+	return ((n - 1) / 3);
 }
 
 /**
@@ -26,21 +26,21 @@ size_t gap_size(size_t size)
 void shell_sort(int *array, size_t size)
 {
 	size_t gap, i, j;
-	int temp; 
-    
-     if (!array || !size) 
+	int temp;
+
+	if (!array || !size)
 		return;
-        
-    for (gap = gap_size(size); gap; gap = (gap - 1) / 3)
+
+	for (gap = gap_size(size); gap; gap = (gap - 1) / 3)
 	{
-	    for (i = gap; i < size; i++)
-	    {
-		    temp = array[i];
-			    for (j = i; j > gap - 1 && array[j - gap] > temp; j -= gap)
-			    {
-				    array[j] = array[j - gap];
-			    }
-	        array[j] = temp;
+		for (i = gap; i < size; i++)
+		{
+			temp = array[i];
+			for (j = i; j > gap - 1 && array[j - gap] > temp; j -= gap)
+			{
+				array[j] = array[j - gap];
+			}
+			array[j] = temp;
 		}
 		print_array(array, size);
 	}
